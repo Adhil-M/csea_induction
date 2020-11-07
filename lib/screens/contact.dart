@@ -9,7 +9,7 @@ class Contact extends StatelessWidget {
         child: Container(
       width: size.width,
       padding: EdgeInsets.symmetric(
-          horizontal: size.width * 0.1, vertical: size.height * 0.1),
+          horizontal: size.width * 0.1, vertical: size.height * 0.2),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

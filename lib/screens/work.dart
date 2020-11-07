@@ -18,12 +18,17 @@ class _WorkState extends State<Work> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
 
-    return Container(
+    return Center(
       child: Container(
+        padding: EdgeInsets.only(top: 10),
         width: size.width,
         child: Column(
           children: <Widget>[
-            Text("BMI Calculator"),
+            Text(
+              "BMI Calculator",
+              style: TextStyle(fontSize: 25),
+            ),
+            Padding(padding: EdgeInsets.only(top: 20)),
             isshow == false
                 ? Padding(
                     padding: const EdgeInsets.all(15.0),
@@ -34,7 +39,10 @@ class _WorkState extends State<Work> {
                           hintStyle: TextStyle(fontSize: 15)),
                     ),
                   )
-                : Text("Your IBM value is : $r"),
+                : Text(
+                    "Your IBM value is : $l",
+                    style: TextStyle(fontSize: 17),
+                  ),
             isshow == false
                 ? Padding(
                     padding: const EdgeInsets.all(15.0),
@@ -53,7 +61,7 @@ class _WorkState extends State<Work> {
                         h = double.parse(mycontroller1.text);
                         w = double.parse(mycontroller2.text);
                         r = w / (h * h);
-
+                        l = r.toStringAsFixed(3);
                         isshow = true;
                       });
                     },
