@@ -52,7 +52,7 @@ class _WorkState extends State<Work> {
                       setState(() {
                         h = double.parse(mycontroller1.text);
                         w = double.parse(mycontroller2.text);
-                        r = double.parse((w / (h * h).toStringAsFixed(3)));
+                        r = w / (h * h);
 
                         isshow = true;
                       });
@@ -62,6 +62,8 @@ class _WorkState extends State<Work> {
                 : RaisedButton(
                     onPressed: () {
                       setState(() {
+                        mycontroller1.clear();
+                        mycontroller2.clear();
                         isshow = false;
                       });
                     },
